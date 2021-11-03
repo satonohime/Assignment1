@@ -2,3 +2,29 @@
     padding: 0px;
     margin: 0px;
 }
+
+body {
+    display: grid;
+    grid-template-columns: auto, repeat(1fr, 4);
+    grid-template-areas: 
+    "sidebar content content content content";
+    height: 100vh;
+}
+
+header {
+    display: flexbox;
+    grid-area: sidebar;
+    background-color: aqua;
+}
+
+
+header ul {
+    list-style: none;
+    justify-self: center;
+}
+
+main {
+    display: flexbox;
+    grid-area: content;
+    background-color: blueviolet;
+}
