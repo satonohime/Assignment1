@@ -1,13 +1,13 @@
-*{
+* {
     padding: 0px;
     margin: 0px;
 }
 
 body {
     display: grid;
-    grid-template-columns: auto, repeat(1fr, 4);
+    grid-template-columns: auto, repeat(1fr, 5);
     grid-template-areas: 
-    "sidebar content content content content";
+    "sidebar content content content content content";
     height: 100vh;
 }
 
@@ -17,10 +17,21 @@ header {
     background-color: aqua;
 }
 
+h1 {
+    padding: 50px;
+}
 
 header ul {
+    display: flexbox;
     list-style: none;
-    justify-self: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 120%;
+}
+
+header ul li {
+    text-align: center;
+    padding: 10px;
 }
 
 main {
