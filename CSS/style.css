@@ -240,4 +240,9 @@ button:hover {
     padding: 0px;
 }
 
+.favContactContentHeader > img {
+    min-height: 70px;
+    min-width: 70px;
+}
+
 
