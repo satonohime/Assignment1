@@ -58,3 +58,61 @@ main {
     align-items: center;
     justify-content: center;
 }
+
+#profileImg {
+    max-width: 10%;
+    max-height: 10%;
+    padding-left: 80px
+}
+
+.inputFields {
+    list-style: none;
+}
+
+.inputFields li {
+    display: flex;
+    align-items: baseline;
+}
+
+.textField {
+    display: inline-flex;
+    font-size: 120%;
+    padding: 10px;
+    margin: 10px;
+    width: 200px;
+    background-color: white;
+    border:2px solid #6e6a86;
+    border-radius: 5px;
+}
+
+.addButton {
+    display: flex;
+    font-size: 200%;
+}
+
+.saveButton {
+    display: inline-flex;
+    padding: 8px;
+    margin-right: 5px;
+    margin-left: 10px;
+    margin-top: 10px;
+    background-color: #56949f;
+    font-size: 120%;
+    border: 0px solid;
+    border-radius: 5px;
+    color: white;
+}
+
+.cancelButton {
+    display: inline-flex;
+    padding: 8px;
+    margin-left: 5px;
+    margin-right: 10px;
+    margin-top: 10px;
+    background-color: #9893a5;
+    font-size: 120%;
+    border: 0px solid;
+    border-radius: 5px;
+    color: white;
+}
+
