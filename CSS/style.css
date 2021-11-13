@@ -3,15 +3,73 @@
     margin: 0px;
 }
 
-body {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: auto;
-    grid-template-areas: 
-    "sidebar content content content content";
-    height: 100vh;
-    font-family: 'Inter', sans-serif;
+
+@media screen and (max-width: 600px) {
+    body {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 65px;
+        row-gap: 0px;
+        grid-template-areas: 
+        "sidebar"
+        "content";
+        height: 100vh;
+        font-family: 'Inter', sans-serif;
+    }
+
+    main {
+        display: flex;
+        justify-content: center;
+    }
+
+    header {
+        display: flex;
+        justify-content: flex-start;
+        position: sticky;
+        top: 0px;
+        height: 65px;
+        overflow: hidden;
+    }
+
+    header > * {
+        text-overflow: ellipsis;
+    }
+
+    nav ul{
+        display: flex;
+        align-items: baseline;
+    }
+
 }
+
+@media screen and (min-width: 600px) {
+    body {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "sidebar content content content content";
+        height: 100vh;
+        font-family: 'Inter', sans-serif;
+    }
+
+    main {
+        padding-left: 120px;
+        padding-top: 50px
+    }
+
+    header ul {  
+        font-size: 1.3rem;
+    }
+
+    header h1 {
+        text-align: left;
+        margin-top: 15px;
+        padding: 50px;
+    }
+}
+
+
 
 header {
     grid-area: sidebar;
@@ -28,14 +86,8 @@ ul a:hover {
     color: #eee9e6;
 }
 
-header h1 {
-    margin-top: 15px;
-    padding: 50px;
-}
-
 header ul {
     list-style: none;
-    font-size: 1.3rem;
 }
 
 header ul li {
@@ -46,8 +98,6 @@ header ul li {
 main {
     grid-area: content;
     background-color: #faf4ed;
-    padding-left: 120px;
-    padding-top: 50px
 }
 
 .nameCard {
@@ -58,12 +108,6 @@ main {
     margin: 20px;
     align-items: center;
     justify-content: center;
-}
-
-#profileImg {
-    max-width: 10%;
-    max-height: 10%;
-    padding-left: 80px
 }
 
 .inputFields {
@@ -154,5 +198,12 @@ button:hover {
 .favContactInfoList ul li {
     list-style: none;
     padding: 0px;
+}
+
+
+#profileImg {
+    padding-left: 60px;
+    display: flex;
+    height: 10%;
 }
 
