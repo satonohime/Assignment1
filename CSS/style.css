@@ -8,7 +8,7 @@
     body {
         display: grid;
         grid-template-columns: auto;
-        grid-template-rows: 65px;
+        grid-template-rows: min-content;
         row-gap: 0px;
         grid-template-areas: 
         "sidebar"
@@ -18,8 +18,9 @@
     }
 
     main {
-        display: flex;
+        display: grid;
         justify-content: center;
+        grid-area: content;
     }
 
     header {
@@ -27,6 +28,7 @@
         justify-content: flex-start;
         position: sticky;
         top: 0px;
+        width: 100%;
         height: 65px;
         overflow: hidden;
     }
@@ -37,7 +39,24 @@
 
     nav ul{
         display: flex;
-        align-items: baseline;
+        align-items: center;
+    }
+
+    .favContactContentHeader {
+        display: flex;
+        height: 150px
+    }
+
+    .favContactContentHeader > img {
+        width: 100%;
+        height: 100%;
+    }
+
+    #profileImg {
+        padding-top: 30px;
+        padding-left: 60px;
+        display: inline;
+        inline-size: 120px;
     }
 
 }
@@ -66,6 +85,13 @@
         text-align: left;
         margin-top: 15px;
         padding: 50px;
+    }
+
+    .page2ImgWrapper {
+        padding-left: 60px;
+        display: inline-flex;
+        width: 10%;
+        height: 10%;
     }
 }
 
@@ -200,10 +226,4 @@ button:hover {
     padding: 0px;
 }
 
-
-#profileImg {
-    padding-left: 60px;
-    display: flex;
-    height: 10%;
-}
 
