@@ -5,18 +5,27 @@
 
 body {
     display: grid;
-    grid-template-columns: auto, repeat(1fr, 5);
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto;
     grid-template-areas: 
-    "sidebar content content content content content";
+    "sidebar content content content content";
     height: 100vh;
     font-family: 'Inter', sans-serif;
 }
 
 header {
-    display: flexbox;
     grid-area: sidebar;
     background-color: #c4a7e7;
     font-family: 'Raleway', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+ul a:hover {
+    color: #eee9e6;
 }
 
 h1 {
@@ -24,11 +33,8 @@ h1 {
 }
 
 header ul {
-    display: flexbox;
     list-style: none;
-    align-items: center;
-    justify-content: center;
-    font-size: 120%;
+    font-size: 1.3rem;
 }
 
 header ul li {
@@ -37,7 +43,18 @@ header ul li {
 }
 
 main {
-    display: flexbox;
     grid-area: content;
     background-color: #faf4ed;
+    padding-left: 100px;
+    padding-top: 100px
+}
+
+.nameCard {
+    display: inline-flex;
+    height: 150px;
+    width: 200px;
+    background-color: #c4a7e7;
+    margin: 20px;
+    align-items: center;
+    justify-content: center;
 }
